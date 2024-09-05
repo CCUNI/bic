@@ -5,6 +5,7 @@
 #include<iostream>
 using namespace std;
 
+<<<<<<< HEAD
 // Para leer variables de texto se utiliza el operador << del objeto cin, que
 // lee solo una palabra. Para leer una linea completa (es decir, incluyendo los
 // espacios en blanco) se debe utilzar getline (ej, reemplazar cin>>x por
@@ -16,3 +17,10 @@ int main() {
 	return 0;
 }
 
+=======
+int main(){
+    cout << "Hola Mundo" <<endl;
+    cout << "Este es mi primer programa en C++" <<endl;
+    return 0; 
+}
+>>>>>>> 78dae7db64d2f5ddaa360232a88bc7741ec5b5d3
