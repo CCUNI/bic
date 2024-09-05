@@ -1,0 +1,3 @@
+Proceso triangulo
+	
+FinProceso
