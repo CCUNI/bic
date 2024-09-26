@@ -1,32 +1,34 @@
-/*Escribir un programa que genere e imprima los nÃºmeros pares que
- se encuentran entre 0 y un nÃºmero natural n > 0 dado por
-  el usuario*/
+/*
+Escribir un programa que genere e imprima los números pares que se encuentran entre
+0 y un número natural n > 0 dado por el usuario.
+*/
 
 #include <iostream>
 using namespace std;
 
 int main(){
-    int n;
+	int n, i= 0;
+	
+	
+	//Validar n>0
+	do{
+		cout << "Ingrese un numero: ";
+		cin >>n;
+		if(n<=0){
+			cout<< "El numero debe ser mayor que cero: ";
+			cin>>n;
+		}
+		
+	}while(n <= 0);
+	
+	cout << "\nLos numeros pares entre: " << 0 << " y " << n << " son:\n ";
+	do{
+		cout << i << " ";	
+		i+=2; //i=i+2;
+	}while(i <= n);
+	
+	
 
-    int pares = 0;
-    int cont = 0;
-
-    //Validando el numero
-    do{
-        cout << "Ingrese un entero positivo: ";
-        cin >> n;
-        if(n <= 0){
-            cout << "El numero debe ser positivo, vuelva a ingresarlo: ";
-            cin >> n;
-        }
-    }while(n <= 0);
-
-
-    do{
-        cout << pares + cont <<endl;
-        cont +=2;
-
-    }while(cont <= n);
-
-    return 0; 
+	return 0;
 }
+
