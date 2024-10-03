@@ -1,25 +1,28 @@
-/*Realice un programa que aproxime el valor de π utilizando la siguiente serie:
-La diferencia entre la serie y π debe ser menor a 0,0005. Imprime el número de términos
-requerido para obtener esta precisión*/
+/*
+10
+*/
 #include <iostream>
-//#define _USE_MATH_DEFINES // para usar M_PI en DevC++
-#include <cmath>
+//#define _USE_MATH_DEFINES 
+#include <cmath>//abs(), M_PI
 using namespace std;
 
 int main(){
+	double pi = 3.14159;
+	
+	double suma = 0.0;
+	
+	int i = 0;
+	while(fabs(pi - suma) > 0.0005){ //considerar valor absoluto
+		if(i%2 == 0){
+			suma += 4.0/(2*i + 1); //considerar division no entera y agrupar
+		}else{                     // de forma correcta
+			suma -= 4.0/(2*i + 1);
+		}
+		i++; //inclementar el contador
+	}
+	
+	cout << "numero de iteraciones: " <<i <<endl;
 
-    double suma = 0.0;
-    int cont = 1;
-    while(abs(M_PI - suma) >= 0.0005){
-        if(cont % 2 == 0){
-            suma -= 4.0/(2*cont - 1);
-        }else{
-            suma += 4.0/(2*cont - 1);
-        }
-        cont++;
-    }
-
-    cout << cont <<endl;
-
-    return 0; 
+	return 0;
 }
+

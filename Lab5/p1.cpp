@@ -1,6 +1,5 @@
 /*
-1. Escribir un programa que dado un nÃºmero natural
-n, muestre los primeros n nÃºmeros
+Escribir un programa que dado un número natural n, muestre los primeros n números
 impares y calcule la suma de ellos.
 */
 
@@ -8,26 +7,33 @@ impares y calcule la suma de ellos.
 using namespace std;
 
 int main(){
-    int n, suma = 0;
-    cout << "Ingrese un entero positivo: ";
-    cin >> n;
+	//Datos
+	int n, suma = 0;
+	cout << "Ingrese un entero: ";
+	cin >> n;
+	
+	/*
+	int i = 0;
+	//Procesamiento, resutaldo
+	while(i < n){
+		suma += 2*i + 1; // suma + 2*i + 1;
+		cout << 2*i + 1 << endl;
+		i++; //i = i +1;
+	}
+	*/
+	
+	for(int i = 0; i < n ;i++){
+		suma += 2*i + 1; // suma + 2*i + 1;
+		cout << 2*i + 1 << endl;
+	}
+	
 
-    /*
-    int cont_impar = 0;
-    while(cont_impar < n){
-        suma = suma + 2*cont_impar + 1; //acumula la suma de impares
-        cout << 2*cont_impar +1 <<endl; //muestra la lista de impares
-        cont_impar++; // actualiza el contador
+	cout << "La suma es: " << suma << endl;
+	
+	
 
-    }
-    */
 
-    for(int i = 0; i < n; i++){
-        suma += 2*i + 1; //suma = suma + 2*i + 1;
-        cout << 2*i + 1 <<endl;
-    }
 
-    cout << "La suma es: " << suma <<endl; 
-
-    return 0; 
+	return 0;
 }
+

@@ -1,34 +1,35 @@
 /*
-p2. Realizar un programa que, dado un nÃºmero entero positivo, calcule
-la suma de sus dÃ­gitos
-Ejemplo 
-entrada: 123 ... 3 == 123%10  ..... 123/10 == 12
-salida la suma es 6;
+Realizar un programa que, dado un número entero positivo, 
+calcule la suma de sus dígitos.
+Ejemplo: 
+ENTRADA: 123   123456  1
+SALIDA : 6     21      1
 */
 
 #include <iostream>
 using namespace std;
 
 int main(){
-    int n, suma = 0;
-    cout << "ingrese un entero positivo: " <<endl;
-    cin >> n;
-    int N = n;
-    /*
-    while(n > 0){
-        suma +=  n % 10;
-        n /= 10;
-    }
-    */
-    
-    //utilice estructura for()
-    for( ; n > 0 ; n /= 10){
-        suma += n % 10;
-    }
+	int n, suma = 0;
+	
+	cout << "Ingrese un entero positivo: ";
+	cin >> n;
+	int N = n;
+	
+	/*
+	while(n>0){
+		suma = suma + n%10;
+		n = n/10;
+	}
+	*/
+	
+	for(;n>0 ;n = n/10){
+		suma = suma + n%10;
+	}
+	
+	
+	cout << "La suma de digitos de " << N << " es: " << suma <<endl;
 
-    cout << "La suma de digitos de " << N << " es:  " << suma <<endl;
-
-    
-
-    return 0; 
+	return 0;
 }
+
