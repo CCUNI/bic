@@ -1,2 +1,1 @@
-{1,4,7,6};
-    int b[] = {1,4,5,6};
+La moda: es el dato que aparece con mayor frecuencia
